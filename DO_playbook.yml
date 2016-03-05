@@ -3,21 +3,25 @@
 
 - hosts: localhost
 
+  vars:
+    do_api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+    droplet_name: test-droplet
+
   tasks:
   
   - name: create new droplet
     digital_ocean:
       state: present
       command: droplet
-      name: testdroplet
-      api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+      name: "{{ droplet_name }}"
+      api_token: "{{ do_api_token }}"
       size_id: 512mb
       region_id: nyc2
       image_id: ubuntu-14-04-x64
       wait_timeout: 600
       
-    register: test_droplet
+    register: create_results
     
-  - debug: msg="ID is {{ test_droplet.droplet.id }}"
-  - debug: msg="IP is {{ test_droplet.droplet.ip_address }}"
+  - debug: msg="ID is {{ create_results.droplet.id }}"
+  - debug: msg="IP is {{ create_results.droplet.ip_address }}"
     

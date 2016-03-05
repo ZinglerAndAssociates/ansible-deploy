@@ -5,16 +5,19 @@
 
 - hosts: localhost
 
+  vars:
+    do_api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+
   tasks:
   
   - name: destroy droplet
     digital_ocean:
       state: deleted
       id: "{{ droplet_id }}"
-      api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+      api_token: "{{ do_api_token }}"
       wait_timeout: 600
       
     register: destroy
     
-  - debug: msg="Output is {{ destroy.msg }}"
+  - debug: msg="{{ destroy }}"
     
