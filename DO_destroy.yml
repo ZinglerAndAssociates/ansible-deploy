@@ -1,0 +1,20 @@
+---
+# This playbook will destroy a Digital Ocean droplet based on a provided droplet it.
+# Use the following command with the proper droplet_id value to run it:
+#   ansible-playbook --extra-vars "droplet_id=11707277" DO_destroy.yml
+
+- hosts: localhost
+
+  tasks:
+  
+  - name: destroy droplet
+    digital_ocean:
+      state: deleted
+      id: "{{ droplet_id }}"
+      api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+      wait_timeout: 600
+      
+    register: destroy
+    
+  - debug: msg="Output is {{ destroy.msg }}"
+    
