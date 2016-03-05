@@ -1,0 +1,23 @@
+---
+# This playbook will create a Digital Ocean droplet
+
+- hosts: localhost
+
+  tasks:
+  
+  - name: create new droplet
+    digital_ocean:
+      state: present
+      command: droplet
+      name: testdroplet
+      api_token: 12b6186f3674cf7992dfbd91718b845d810abd5161500dbcbecd3ae588a20ac3
+      size_id: 512mb
+      region_id: nyc2
+      image_id: ubuntu-14-04-x64
+      wait_timeout: 600
+      
+    register: test_droplet
+    
+  - debug: msg="ID is {{ test_droplet.droplet.id }}"
+  - debug: msg="IP is {{ test_droplet.droplet.ip_address }}"
+    
