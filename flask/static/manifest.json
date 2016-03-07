@@ -1,0 +1,17 @@
+{  
+  "name": "ansible-deploy Z&A",  
+  "short_name": "Z&A ansible-deploy",  
+  "icons": [{  
+        "src": "/images/creeperface.jpg",  
+        "sizes": "192x192",
+        "type": "image/png"
+      }],  
+  "start_url": "/",  
+  "display": "standalone",  
+  "gcm_sender_id": "1057011338223",
+  "gcm_user_visible_only": true,
+  "permissions": ["gcm"
+  ],
+  "background_color": "#00FF00",
+  "theme_color": "#00FF00"
+}
