@@ -8,21 +8,30 @@
 
     {% include "js.html" %}
     {% include "css.html" %}
-    
-
   </head>
+
   <body>
-  <center>
+  <div data-role="page">
+  <br><br><br>
 
-	<div data-role="header" data-position="fixed">
-		<!-- ASCII Logo     -->
-		{% include "ansible_deploy_ascii_logo.html" %}
-	</div>
+  
+<!-- Header -->
+<div data-role="header" data-position="fixed">
+	<span data-icon="d" class="nav1"></span>
 
-<h1>Zingler & Associates Inc.</h1>
+	<center>
+	<h1>Zingler & Associates Inc.</h1>
+	</center>
+</div>
 
 
 
+<!-- Content -->
+<div data-role="main" class="ui-content">
+<center>
+
+<!-- ASCII LOGO -->
+{% include "ansible_deploy_ascii_logo.html" %}
 
 <h3>Browser Notifications</h3>
 <button id="enable_push_btn" class="js-push-button" style="width:50%" disabled>
@@ -35,6 +44,13 @@ Recieve Browser Notifictions when you subscribe and a droplet is created
 <img src="/images/zanda_logos/zinglericon_green.png">
 
 </center>
+</div>
+
+
+<!-- Footer -->
+
+
+</div>
 </body>
 
 

@@ -1,8 +1,10 @@
 
-h1 { font-family: 'Pacifico', Arial, serif; font-weight: 400; }
+h1 { font-family: 'Pacifico', Arial, serif; font-weight: 400; 
+	font-size: 50px;
+}
 
 #ascii_logo {
-	font-size: 3px;
+	font-size: 2px;
 }
 
 
@@ -30,4 +32,11 @@ color: #000;
 ::-webkit-selection {
 background:#00FF00;
 color: #000;
+}
+
+span.nav1 {
+	color:#00FF00;
+	font-size: 30px;
+	float: left;
+	padding: 5px;
 }
