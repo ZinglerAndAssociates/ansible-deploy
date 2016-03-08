@@ -2,5 +2,32 @@
 h1 { font-family: 'Pacifico', Arial, serif; font-weight: 400; }
 
 #ascii_logo {
-	font-size: 5px;
+	font-size: 3px;
+}
+
+
+h3 { font-family: 'Bangers', Arial, serif; font-weight: 400; 
+	font-size: 24px;
+	}
+
+
+p { font-family: 'Allerta Stencil', Arial, serif; font-weight: 400; }
+
+.js-push-button { font-family: 'Limelight', Arial, serif; font-weight: 400; }
+
+
+p { font-family: 'Arvo', Arial, serif; font-weight: 400; }
+
+
+::selection {
+background:#00FF00;
+color: #000;
+}
+::-moz-selection {
+background:#00FF00;
+color: #000;
+}
+::-webkit-selection {
+background:#00FF00;
+color: #000;
 }

@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
   WebFontConfig = {
     google: { families: [ 'Arvo::latin', 'Pacifico::latin', 'Dancing+Script::latin', 'Bangers::latin', 'Limelight::latin', 'Allerta+Stencil::latin' ] }
   };
@@ -10,4 +10,3 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); 
-</script>
