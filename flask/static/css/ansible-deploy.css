@@ -12,8 +12,16 @@ h3 { font-family: 'Bangers', Arial, serif; font-weight: 400;
 	font-size: 24px;
 	}
 
+pre {
+	border: 2px solid #0f0;	
+	font-size: 14px;
+}
 
-p { font-family: 'Allerta Stencil', Arial, serif; font-weight: 400; }
+.CodeMirror-vscrollbar {
+	overflow-y: hidden;
+}
+
+/*p { font-family: 'Allerta Stencil', Arial, serif; font-weight: 400; }*/
 
 .js-push-button { font-family: 'Limelight', Arial, serif; font-weight: 400; }
 

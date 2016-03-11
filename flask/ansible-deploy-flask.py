@@ -40,6 +40,9 @@ db = client.ansible_do_site
 # Passed in to all templates
 script_args = {}
 
+# Theme 
+script_args['theme'] = 'b'
+
 def create_user(name):
 
 	# creating users
@@ -61,6 +64,8 @@ def home_page():
 			print 'POST TYPE: disable subscription'
 	if request.method == 'GET' :
 		pass
+
+
 
 	return render_template('./index.html', script_args=script_args)
 

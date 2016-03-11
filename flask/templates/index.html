@@ -11,31 +11,31 @@
   </head>
 
   <body>
-  <div data-role="page">
+  <div data-role="page" data-theme="{{ script_args.theme }}">
   <br><br><br>
 
 
 <!-- Header -->
 <div data-role="header" data-position="fixed">
 	<span data-icon="d" class="nav1"></span>
-
+  <a href="#myPanel" id='mypanel' class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
 	<center>
 	<h1>Zingler & Associates Inc.</h1>
 	</center>
 </div>
 
-
+{% include "mypanel.html" %}
 
 <!-- Content -->
 <div data-role="main" class="ui-content">
 <center>
 
 <!-- ASCII LOGO -->
-{% include "ansible_deploy_ascii_logo.html" %}
+<!-- {% include "ansible_deploy_ascii_logo.html" %} -->
 
-<h3>Browser Notifications</h3>
+
 <button id="enable_push_btn" class="js-push-button" style="width:50%" disabled>
-Enable Push Messages  
+<h3>Browser Notifications: Enable Messages</h3>
 </button>
 <p>
 Recieve Browser Notifictions when you subscribe and a droplet is created
